@@ -1,6 +1,5 @@
-import { mount } from "@vue/test-utils";
-
 import { nextTick } from "vue";
+import { mount } from "@vue/test-utils";
 
 const App = {
   data() {
@@ -21,8 +20,7 @@ const App = {
 };
 
 const wrapperFactory = ({ data } = { data: {} }) => {
-  const appClone = { ...App }; // Shallow Clone
-  return mount(appClone, {
+  return mount(App, {
     data() {
       return data;
     },
