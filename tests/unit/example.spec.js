@@ -12,22 +12,25 @@ const App = {
   `,
 };
 
+const wrapperFactory = (props) => {
+  const appClone = { ...App };
+  return mount(appClone, {
+    props,
+  });
+};
+
 describe("Testing App", () => {
   it("should render that count is odd", () => {
-    const wrapper = mount(App, {
-      props: {
-        count: 1,
-      },
+    const wrapper = wrapperFactory({
+      count: 1,
     });
 
     expect(wrapper.html()).toContain("Count is odd.");
   });
 
   it("should render that count is even", () => {
-    const wrapper = mount(App, {
-      props: {
-        count: 2,
-      },
+    const wrapper = wrapperFactory({
+      count: 2,
     });
 
     expect(wrapper.html()).toContain("Count is even.");
