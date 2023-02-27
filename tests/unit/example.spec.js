@@ -35,9 +35,7 @@ describe("Testing App", () => {
       },
     });
 
-    wrapper.find("button").trigger("click");
-
-    await nextTick();
+    await wrapper.find("button").trigger("click");
 
     expect(wrapper.html()).toContain("Count is odd.");
   });
@@ -49,10 +47,8 @@ describe("Testing App", () => {
       },
     });
 
-    wrapper.find("button").trigger("click");
-    wrapper.find("button").trigger("click");
-
-    await nextTick();
+    await wrapper.find("button").trigger("click");
+    await wrapper.find("button").trigger("click");
 
     expect(wrapper.html()).toContain("Count is even.");
   });
