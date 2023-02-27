@@ -1,10 +1,10 @@
 import { mount } from "@vue/test-utils";
 
 const App = {
-  props: {
-    count: {
-      type: Number,
-    },
+  data() {
+    return {
+      count: 0,
+    };
   },
   template: `
     <div v-if="count % 2 === 0">Count is even.</div>
@@ -12,17 +12,21 @@ const App = {
   `,
 };
 
-const wrapperFactory = (props) => {
-  const appClone = { ...App };
+const wrapperFactory = ({ data } = { data: {} }) => {
+  const appClone = { ...App }; // Shallow Clone
   return mount(appClone, {
-    props,
+    data,
   });
 };
 
 describe("Testing App", () => {
   it("should render that count is odd", () => {
     const wrapper = wrapperFactory({
-      count: 1,
+      data() {
+        return {
+          count: 1,
+        };
+      },
     });
 
     expect(wrapper.html()).toContain("Count is odd.");
@@ -30,7 +34,11 @@ describe("Testing App", () => {
 
   it("should render that count is even", () => {
     const wrapper = wrapperFactory({
-      count: 2,
+      data() {
+        return {
+          count: 2,
+        };
+      },
     });
 
     expect(wrapper.html()).toContain("Count is even.");
