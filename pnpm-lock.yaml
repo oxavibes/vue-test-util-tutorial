@@ -6,6 +6,7 @@ specifiers:
   '@vue/cli-plugin-babel': ~5.0.0
   '@vue/cli-plugin-eslint': ~5.0.0
   '@vue/cli-plugin-unit-jest': ~5.0.0
+  '@vue/cli-plugin-vuex': ~5.0.0
   '@vue/cli-service': ~5.0.0
   '@vue/test-utils': ^2.0.0-0
   '@vue/vue3-jest': ^27.0.0-alpha.1
@@ -18,10 +19,12 @@ specifiers:
   jest: ^27.0.5
   prettier: ^2.4.1
   vue: ^3.2.13
+  vuex: ^4.0.0
 
 dependencies:
   core-js: 3.29.0
   vue: 3.2.47
+  vuex: 4.1.0_vue@3.2.47
 
 devDependencies:
   '@babel/core': 7.21.0
@@ -29,6 +32,7 @@ devDependencies:
   '@vue/cli-plugin-babel': 5.0.8_crug6bapk7idjb77t5rimtuvy4
   '@vue/cli-plugin-eslint': 5.0.8_yvnkslq6l73c7sesu7e5hzum2a
   '@vue/cli-plugin-unit-jest': 5.0.8_di6v2vh44obqc3dxw6ct5ez7gm
+  '@vue/cli-plugin-vuex': 5.0.8_@vue+cli-service@5.0.8
   '@vue/cli-service': 5.0.8_wsglhzocxeqeughab3nmclicb4
   '@vue/test-utils': 2.3.0_vue@3.2.47
   '@vue/vue3-jest': 27.0.0_utfkrrqrlopmvpjdneqq3yidvq
@@ -2502,6 +2506,10 @@ packages:
       - walrus
       - whiskers
     dev: true
+
+  /@vue/devtools-api/6.5.0:
+    resolution: {integrity: sha512-o9KfBeaBmCKl10usN4crU53fYtC1r7jJwdGKjPT24t348rHxgfpZ0xL3Xm/gLUYnc0oTp8LAmrxOeLyu6tbk2Q==}
+    dev: false
 
   /@vue/reactivity-transform/3.2.47:
     resolution: {integrity: sha512-m8lGXw8rdnPVVIdIFhf0LeQ/ixyHkH5plYuS83yop5n7ggVJU+z5v0zecwEnX7fa7HNLBhh2qngJJkxpwEEmYA==}
@@ -8506,6 +8514,15 @@ packages:
       '@vue/runtime-dom': 3.2.47
       '@vue/server-renderer': 3.2.47_vue@3.2.47
       '@vue/shared': 3.2.47
+
+  /vuex/4.1.0_vue@3.2.47:
+    resolution: {integrity: sha512-hmV6UerDrPcgbSy9ORAtNXDr9M4wlNP4pEFKye4ujJF8oqgFFuxDCdOLS3eNoRTtq5O3hoBDh9Doj1bQMYHRbQ==}
+    peerDependencies:
+      vue: ^3.2.0
+    dependencies:
+      '@vue/devtools-api': 6.5.0
+      vue: 3.2.47
+    dev: false
 
   /w3c-hr-time/1.0.2:
     resolution: {integrity: sha512-z8P5DvDNjKDoFIHK7q8r8lackT6l+jo/Ye3HOle7l9nICP9lf1Ci25fy9vHd0JOWewkIFzXIEig3TdKT7JQ5fQ==}
