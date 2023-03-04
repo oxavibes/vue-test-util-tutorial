@@ -1,4 +1,4 @@
-# vue-test-utils-tutorial
+# vue-test-utils-practice
 
 ## Project setup
 ```
