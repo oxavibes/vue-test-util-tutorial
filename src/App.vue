@@ -1,17 +1,10 @@
 <template>
-  <TestingVuex></TestingVuex>
+  <div></div>
 </template>
 
 <script>
-// import HelloWorld from "./components/HelloWorld.vue";
-import TestingVuex from "./components/TestingVuex.vue";
-
 export default {
   name: "App",
-  components: {
-    // HelloWorld,
-    TestingVuex,
-  },
 };
 </script>
 
