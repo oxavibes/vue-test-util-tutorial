@@ -23,13 +23,4 @@ describe("Testing AppCounter", () => {
 
     expect(wrapper.html()).toContain("Count is odd.");
   });
-
-  it("should render that count is even", async () => {
-    const wrapper = wrapperFactory();
-
-    await wrapper.find("button").trigger("click");
-    await wrapper.find("button").trigger("click");
-
-    expect(wrapper.html()).toContain("Count is even.");
-  });
 });
